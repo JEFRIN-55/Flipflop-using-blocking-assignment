@@ -34,13 +34,13 @@ output reg out ;
 always @ (posedge clk)
 begin 
 if (rst)
-    out <= 1'b0;
+    out = 1'b0;
 else if (s & ~r)
-    out <= 1'b1;
+    out = 1'b1;
 else if (~s & r)
-    out <= 1'b0;
+    out = 1'b0;
 else 
-    out <= 1'bx;
+    out = 1'bx;
 end
 endmodule
 
@@ -79,7 +79,7 @@ clk_t = ~clk_t;
 ```
 #### SIMULATION OUTPUT
 
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/3304ee88-c7ad-4b02-af67-3c639619341a" />
+<img width="1915" height="1076" alt="image" src="https://github.com/user-attachments/assets/bcf228cc-6aaf-4fef-9b90-caca9b07fa63" />
 ---
 
 ### JK Flip-Flop (Blocking)
@@ -90,13 +90,13 @@ output reg out;
 always @(posedge clk)
 begin
     if (rst)
-        out <= 1'b0;
+        out = 1'b0;
     else if (j & ~k)
-        out <= 1'b1;
+        out = 1'b1;
     else if (~j & k)
-        out <= 1'b0;
+        out = 1'b0;
     else
-        out <= ~out;
+        out = ~out;
 end
 endmodule
 ```
@@ -134,7 +134,8 @@ endmodule
 
 ```
 #### SIMULATION OUTPUT
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/005b1474-fae9-464e-b90a-d10c74de7490" />
+
+<img width="1919" height="1075" alt="image" src="https://github.com/user-attachments/assets/0bac9c55-4ac3-4174-bbaa-22aca5f2952b" />
 ---
 
 
@@ -146,9 +147,9 @@ output reg dout;
 always @(posedge clk)
 begin
 if (rst)
-    dout <= 1'b0;
+    dout = 1'b0;
 else
-    dout <= d;
+    dout = d;
 end
 endmodule
 ```
@@ -178,7 +179,7 @@ endmodule
 
 #### SIMULATION OUTPUT
 
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/c5e801a6-64f0-4cc4-a3d5-d9a2484be552" />
+<img width="1919" height="1072" alt="image" src="https://github.com/user-attachments/assets/fd0a4177-8ffd-4137-840c-14d5ffe92ed1" />
 ---
 
 
@@ -190,11 +191,11 @@ output reg t_out;
 always @(posedge clk)
 begin   
 if (rst)
-    t_out <= 1'b0;
+    t_out = 1'b0;
 else if (t)
-    t_out <= ~t_out;
+    t_out = ~t_out;
 else
-    t_out <= t_out;
+    t_out = t_out;
 end
 endmodule
 ```
@@ -225,7 +226,7 @@ endmodule
 
 #### SIMULATION OUTPUT
 
-<img width="1919" height="1076" alt="image" src="https://github.com/user-attachments/assets/b567741c-4f28-461b-a455-d8a9f1a74471" />
+<img width="1919" height="1077" alt="image" src="https://github.com/user-attachments/assets/9b41845a-00b2-4464-894c-9f7fe5c9d912" />
 
 ---
 
